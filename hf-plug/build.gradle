@@ -1,0 +1,18 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+//apply plugin: 'com.github.dcendents.android-maven'
+
+dependencies{
+    compile gradleApi()
+    compile localGroovy()
+}
+
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: uri('../HaiefngTestPlug'))
+        pom.groupId = 'com.hf'//包名
+        pom.artifactId = 'debug-plug'//在需要引用插件时用到
+        pom.version = '5.0.0'
+    }
+}

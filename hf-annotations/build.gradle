@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.github.TangHaifeng-John'
+
+repositories {
+
+    jcenter()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+android {
+    compileSdkVersion 28
+
+}
+
+dependencies {
+
+    api fileTree(include: ['*.jar'], dir: 'libs')
+
+
+}
