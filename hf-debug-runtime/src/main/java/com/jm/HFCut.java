@@ -23,6 +23,7 @@ public class HFCut {
 
     @Around("addDidiKit()")
     public void insertDidiKit(final ProceedingJoinPoint joinPoint) throws Throwable {
+        joinPoint.proceed();
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         HfSwitch hfSwitch = methodSignature.getMethod()
                 .getAnnotation(HfSwitch.class);
