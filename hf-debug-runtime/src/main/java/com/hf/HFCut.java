@@ -1,4 +1,4 @@
-package com.jm;
+package com.hf;
 
 
 
@@ -6,6 +6,7 @@ package com.jm;
 import android.app.Application;
 
 import com.didichuxing.doraemonkit.DoraemonKit;
+import com.hf.HfSwitch;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -16,7 +17,7 @@ import org.aspectj.lang.reflect.MethodSignature;
 @Aspect
 public class HFCut {
 
-    @Pointcut("execution(@com.jm.HfSwitch * *(..))")
+    @Pointcut("execution(@HfSwitch * *(..))")
 
     public void addDidiKit() {}
 
