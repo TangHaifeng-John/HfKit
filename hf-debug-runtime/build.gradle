@@ -4,8 +4,8 @@ apply plugin:'android-aspectjx'
 
 dependencies {
 
-    api project(path: ':hf-annotations')
-    implementation 'com.didichuxing.doraemonkit:doraemonkit:2.2.1'
+    debugApi project(path: ':hf-annotations')
+    debugApi 'com.didichuxing.doraemonkit:doraemonkit:2.2.1'
 }
 
 android {
