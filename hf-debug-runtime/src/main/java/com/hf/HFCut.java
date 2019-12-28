@@ -4,6 +4,7 @@ package com.hf;
 
 
 import android.app.Application;
+import android.util.Log;
 
 import com.didichuxing.doraemonkit.DoraemonKit;
 import com.hf.HfSwitch;
@@ -28,7 +29,9 @@ public class HFCut {
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         HfSwitch hfSwitch = methodSignature.getMethod()
                 .getAnnotation(HfSwitch.class);
+        Log.i("hf","check insert didi condition");
         if (hfSwitch.needEnableDidi()){
+            Log.i("hf","insert didi");
             DoraemonKit.install((Application) joinPoint.getThis());
         }
     }
